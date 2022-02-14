@@ -6,23 +6,21 @@
  */
 public class HW2 {
     public static void main(String[] args) {
-        System.out.println(SumInside(5,-10));
-        System.out.println(CheckSign(-56)? "Positive": "Negative");
-        System.out.println(CheckSign1(-118));
+        System.out.println(sumInside(5,10));
+        checkSign(-56);
+        System.out.println(checkSign1(-118));
         printWordNTimes("Good day!!!",4);
-        System.out.println(LeapYear(2000));
+        System.out.println(leapYear(2001));
     }
 
-    static boolean SumInside(int a, int b) {
+    static boolean sumInside(int a, int b) {
         return (a+b>=10 && a+b<=20);
     }
 
-    static boolean CheckSign(int d) {
-        return d >= 0;
-    }
+    static void checkSign(int d) {System.out.println( d >= 0? "Positive": "Negative"); }
 
-    static boolean CheckSign1(int k) {
-       return(k < 0? true: false);
+    static boolean checkSign1(int k) {
+       return(k < 0);
     }
 
     static void printWordNTimes(String word, int times) {
@@ -31,7 +29,7 @@ public class HW2 {
         }
     }
 
-    static boolean LeapYear(int year) {
-        return((year % 4 == 0 && year % 100 != 0 || year % 400 == 0)? true: false);
+    static boolean leapYear(int year) {
+        return(year % 4 == 0 && year % 100 != 0 || year % 400 == 0);
     }
 }
